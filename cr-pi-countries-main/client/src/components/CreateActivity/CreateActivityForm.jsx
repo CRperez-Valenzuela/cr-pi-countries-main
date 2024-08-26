@@ -132,15 +132,7 @@ const CreateActivityForm = () => {
       <FormContainer>
         <h2>Crear Actividad Turística</h2>
         <Form onSubmit={handleSubmit}>
-          <Label htmlFor="name">Nombre de la actividad</Label>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Nombre de la actividad"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+          
           <Label>Dificultad:</Label>
           <div>
             {[1, 2, 3, 4, 5].map((level) => (
@@ -187,6 +179,16 @@ const CreateActivityForm = () => {
             options={countries.map((country) => ({ value: country.name, label: country.name }))}
             onChange={handleCountryChange}
             value={formData.countryNames.map((name) => ({ value: name, label: name }))}
+          />
+
+          <Label htmlFor="name">Nombre de la actividad</Label>
+          <Input
+            type="text"
+            name="name"
+            placeholder="Nombre de la actividad"
+            value={formData.name}
+            onChange={handleChange}
+            required
           />
           <Button type="submit" disabled={!formValid}>
             Crear Actividad

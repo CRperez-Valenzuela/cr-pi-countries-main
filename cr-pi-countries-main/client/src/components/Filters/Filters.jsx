@@ -26,14 +26,7 @@ const FilterComponent = () => {
         <option value="South America">South America</option>
         <option value="Oceania">Oceania</option>
       </Select>
-      <Select onChange={handleActivityChange}>
-        <option value="">Selecciona una Actividad</option>
-        {activities.map((activity, index) => (
-          <option key={index} value={activity.name}>
-            {activity.name}
-          </option>
-        ))}
-      </Select>
+      
     </FilterContainer>
   );
 };
